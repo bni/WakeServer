@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8033E2B913E5AE8600170FD3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8033E2B813E5AE8600170FD3 /* Cocoa.framework */; };
+		8033E2C513E5AE8600170FD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8033E2C413E5AE8600170FD3 /* main.m */; };
+		8033E2CC13E5AE8600170FD3 /* WakeServerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8033E2CB13E5AE8600170FD3 /* WakeServerAppDelegate.m */; };
+		8033E2CF13E5AE8700170FD3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8033E2CD13E5AE8700170FD3 /* MainMenu.xib */; };
+		8058597F13E7423800B882FD /* wol.c in Sources */ = {isa = PBXBuildFile; fileRef = 8058597E13E7423800B882FD /* wol.c */; };
+		80A234BD13E70B6400648A42 /* StarMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A234BC13E70B6400648A42 /* StarMenuItem.m */; };
+		80C5084F14F91CDF003375B8 /* GenericFileServerIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 80C5084E14F91CDF003375B8 /* GenericFileServerIcon.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8033E2B413E5AE8600170FD3 /* WakeServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakeServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8033E2B813E5AE8600170FD3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8033E2BB13E5AE8600170FD3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8033E2BC13E5AE8600170FD3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8033E2BD13E5AE8600170FD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8033E2C013E5AE8600170FD3 /* WakeServer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WakeServer-Info.plist"; sourceTree = "<group>"; };
+		8033E2C413E5AE8600170FD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8033E2C613E5AE8600170FD3 /* WakeServer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WakeServer-Prefix.pch"; sourceTree = "<group>"; };
+		8033E2CA13E5AE8600170FD3 /* WakeServerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WakeServerAppDelegate.h; sourceTree = "<group>"; };
+		8033E2CB13E5AE8600170FD3 /* WakeServerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WakeServerAppDelegate.m; sourceTree = "<group>"; };
+		8033E2CE13E5AE8700170FD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8058597E13E7423800B882FD /* wol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wol.c; sourceTree = "<group>"; };
+		8058598113E7429600B882FD /* wol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wol.h; sourceTree = "<group>"; };
+		80A234BB13E70B6400648A42 /* StarMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarMenuItem.h; sourceTree = "<group>"; };
+		80A234BC13E70B6400648A42 /* StarMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarMenuItem.m; sourceTree = "<group>"; };
+		80C5084E14F91CDF003375B8 /* GenericFileServerIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GenericFileServerIcon.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8033E2B113E5AE8600170FD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8033E2B913E5AE8600170FD3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8033E2A913E5AE8600170FD3 = {
+			isa = PBXGroup;
+			children = (
+				80C5084E14F91CDF003375B8 /* GenericFileServerIcon.icns */,
+				8033E2BE13E5AE8600170FD3 /* WakeServer */,
+				8033E2B713E5AE8600170FD3 /* Frameworks */,
+				8033E2B513E5AE8600170FD3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8033E2B513E5AE8600170FD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8033E2B413E5AE8600170FD3 /* WakeServer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8033E2B713E5AE8600170FD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8033E2B813E5AE8600170FD3 /* Cocoa.framework */,
+				8033E2BA13E5AE8600170FD3 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8033E2BA13E5AE8600170FD3 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8033E2BB13E5AE8600170FD3 /* AppKit.framework */,
+				8033E2BC13E5AE8600170FD3 /* CoreData.framework */,
+				8033E2BD13E5AE8600170FD3 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		8033E2BE13E5AE8600170FD3 /* WakeServer */ = {
+			isa = PBXGroup;
+			children = (
+				8033E2CA13E5AE8600170FD3 /* WakeServerAppDelegate.h */,
+				8033E2CB13E5AE8600170FD3 /* WakeServerAppDelegate.m */,
+				8033E2CD13E5AE8700170FD3 /* MainMenu.xib */,
+				8033E2BF13E5AE8600170FD3 /* Supporting Files */,
+				80A234BB13E70B6400648A42 /* StarMenuItem.h */,
+				80A234BC13E70B6400648A42 /* StarMenuItem.m */,
+				8058597E13E7423800B882FD /* wol.c */,
+				8058598113E7429600B882FD /* wol.h */,
+			);
+			path = WakeServer;
+			sourceTree = "<group>";
+		};
+		8033E2BF13E5AE8600170FD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8033E2C013E5AE8600170FD3 /* WakeServer-Info.plist */,
+				8033E2C413E5AE8600170FD3 /* main.m */,
+				8033E2C613E5AE8600170FD3 /* WakeServer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8033E2B313E5AE8600170FD3 /* WakeServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8033E2D213E5AE8700170FD3 /* Build configuration list for PBXNativeTarget "WakeServer" */;
+			buildPhases = (
+				8033E2B013E5AE8600170FD3 /* Sources */,
+				8033E2B113E5AE8600170FD3 /* Frameworks */,
+				8033E2B213E5AE8600170FD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WakeServer;
+			productName = WakeServer;
+			productReference = 8033E2B413E5AE8600170FD3 /* WakeServer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8033E2AB13E5AE8600170FD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 8033E2AE13E5AE8600170FD3 /* Build configuration list for PBXProject "WakeServer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8033E2A913E5AE8600170FD3;
+			productRefGroup = 8033E2B513E5AE8600170FD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8033E2B313E5AE8600170FD3 /* WakeServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8033E2B213E5AE8600170FD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8033E2CF13E5AE8700170FD3 /* MainMenu.xib in Resources */,
+				80C5084F14F91CDF003375B8 /* GenericFileServerIcon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8033E2B013E5AE8600170FD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8033E2C513E5AE8600170FD3 /* main.m in Sources */,
+				8033E2CC13E5AE8600170FD3 /* WakeServerAppDelegate.m in Sources */,
+				80A234BD13E70B6400648A42 /* StarMenuItem.m in Sources */,
+				8058597F13E7423800B882FD /* wol.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8033E2CD13E5AE8700170FD3 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8033E2CE13E5AE8700170FD3 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8033E2D013E5AE8700170FD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8033E2D113E5AE8700170FD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8033E2D313E5AE8700170FD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WakeServer/WakeServer-Prefix.pch";
+				INFOPLIST_FILE = "WakeServer/WakeServer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8033E2D413E5AE8700170FD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WakeServer/WakeServer-Prefix.pch";
+				INFOPLIST_FILE = "WakeServer/WakeServer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8033E2AE13E5AE8600170FD3 /* Build configuration list for PBXProject "WakeServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8033E2D013E5AE8700170FD3 /* Debug */,
+				8033E2D113E5AE8700170FD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8033E2D213E5AE8700170FD3 /* Build configuration list for PBXNativeTarget "WakeServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8033E2D313E5AE8700170FD3 /* Debug */,
+				8033E2D413E5AE8700170FD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8033E2AB13E5AE8600170FD3 /* Project object */;
+}
