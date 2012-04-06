@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>GenericFileServerIcon.icns</string>
+	<string>folder_fileserver.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>wakeserver.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>

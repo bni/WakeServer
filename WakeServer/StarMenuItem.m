@@ -77,6 +77,8 @@
 
         [self mountServerVolume];
 
+        system("ssh -t -t 10.0.1.8 'date > bootup; exec 3< /etc/cryptmount/secrets; cryptmount --all --passwd-fd 3'");
+
         state = STATE_RUNNING;
     }
 }

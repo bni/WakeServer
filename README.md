@@ -3,6 +3,8 @@ OSX menu item to wake up a fileserver using Wake On LAN. After the fileserver ha
 
 Click the menu item again and the server is shut down.
 
+Icon by [qwertykkk](http://qwertykkk.deviantart.com)
+
 TODO: ip address, network, fileserver name, share name and hardware address is hardcoded for my specific setup. 
 
 ## License

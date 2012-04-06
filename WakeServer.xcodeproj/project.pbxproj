@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80230EBF152F07BD00B3D785 /* folder_fileserver.icns in Resources */ = {isa = PBXBuildFile; fileRef = 80230EBE152F07BD00B3D785 /* folder_fileserver.icns */; };
 		8033E2B913E5AE8600170FD3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8033E2B813E5AE8600170FD3 /* Cocoa.framework */; };
 		8033E2C513E5AE8600170FD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8033E2C413E5AE8600170FD3 /* main.m */; };
 		8033E2CC13E5AE8600170FD3 /* WakeServerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8033E2CB13E5AE8600170FD3 /* WakeServerAppDelegate.m */; };
 		8033E2CF13E5AE8700170FD3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8033E2CD13E5AE8700170FD3 /* MainMenu.xib */; };
 		8058597F13E7423800B882FD /* wol.c in Sources */ = {isa = PBXBuildFile; fileRef = 8058597E13E7423800B882FD /* wol.c */; };
 		80A234BD13E70B6400648A42 /* StarMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A234BC13E70B6400648A42 /* StarMenuItem.m */; };
-		80C5084F14F91CDF003375B8 /* GenericFileServerIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 80C5084E14F91CDF003375B8 /* GenericFileServerIcon.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		80230EBE152F07BD00B3D785 /* folder_fileserver.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = folder_fileserver.icns; sourceTree = "<group>"; };
 		8033E2B413E5AE8600170FD3 /* WakeServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakeServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8033E2B813E5AE8600170FD3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8033E2BB13E5AE8600170FD3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -32,7 +33,6 @@
 		8058598113E7429600B882FD /* wol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wol.h; sourceTree = "<group>"; };
 		80A234BB13E70B6400648A42 /* StarMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarMenuItem.h; sourceTree = "<group>"; };
 		80A234BC13E70B6400648A42 /* StarMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarMenuItem.m; sourceTree = "<group>"; };
-		80C5084E14F91CDF003375B8 /* GenericFileServerIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GenericFileServerIcon.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +50,7 @@
 		8033E2A913E5AE8600170FD3 = {
 			isa = PBXGroup;
 			children = (
-				80C5084E14F91CDF003375B8 /* GenericFileServerIcon.icns */,
+				80230EBE152F07BD00B3D785 /* folder_fileserver.icns */,
 				8033E2BE13E5AE8600170FD3 /* WakeServer */,
 				8033E2B713E5AE8600170FD3 /* Frameworks */,
 				8033E2B513E5AE8600170FD3 /* Products */,
@@ -160,7 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8033E2CF13E5AE8700170FD3 /* MainMenu.xib in Resources */,
-				80C5084F14F91CDF003375B8 /* GenericFileServerIcon.icns in Resources */,
+				80230EBF152F07BD00B3D785 /* folder_fileserver.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
