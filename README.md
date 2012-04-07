@@ -1,5 +1,5 @@
 # WakeServer
-OSX menu item to wake up a fileserver using Wake On LAN. After the fileserver has booted a share on it is mounted in the finder.
+OS X menu item to wake up a fileserver using Wake On LAN. After the fileserver has booted a share on it is mounted in the finder.
 
 Click the menu item again and the server is shut down.
 
