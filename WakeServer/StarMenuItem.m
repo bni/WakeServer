@@ -73,11 +73,11 @@
         [updateTimer invalidate];
         updateTimer = nil;
 
-        [self showFilledStar];
+        system("ssh -t -t 10.0.1.8 'exec 3< /etc/cryptmount/secrets; cryptmount --all --passwd-fd 3'");
 
         [self mountServerVolume];
 
-        system("ssh -t -t 10.0.1.8 'date > bootup; exec 3< /etc/cryptmount/secrets; cryptmount --all --passwd-fd 3'");
+        [self showFilledStar];
 
         state = STATE_RUNNING;
     }
