@@ -34,5 +34,7 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>WSServerHardwareAddress</key>
+	<string>00:0c:6e:50:8c:1a</string>
 </dict>
 </plist>

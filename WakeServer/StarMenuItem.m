@@ -113,7 +113,7 @@
         
         unsigned char broadcast_addr[14] = "10.0.1.255";
         unsigned char mac_addr[18] = "00:0c:6e:50:8c:1a";
-        
+
         if (send_wol_packet(broadcast_addr, mac_addr)) {
             NSLog(@"Error sending WOL packet");
         }
@@ -150,6 +150,15 @@
     [statusItem setAction:@selector(clickStar:)];
     
     [statusItem setTarget:self];
+
+    // Read plist values here
+    NSBundle* mainBundle = [NSBundle mainBundle];
+    serverHardwareAddress = [mainBundle objectForInfoDictionaryKey:@"WSServerHardwareAddress"];
+    NSLog(@"serverHardwareAddress: %@", serverHardwareAddress);
+
+    const char* mac_addr = [serverHardwareAddress UTF8String];
+
+    fprintf(stdout, "mac addr: %s\n", mac_addr);
 }
 
 @end

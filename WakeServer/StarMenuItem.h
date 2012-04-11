@@ -17,6 +17,8 @@
     bool starEnabled;
     
     int nrTimerTicks;
+    
+    NSString *serverHardwareAddress;
 }
 
 @end
