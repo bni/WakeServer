@@ -3,6 +3,11 @@ OS X menu item to wake up a fileserver using Wake On LAN. After the fileserver h
 
 Click the menu item again and the server is shut down.
 
+![Screenshot 1](https://raw.github.com/bni/WakeServer/master/screenshot1.png)
+![Screenshot 2](https://raw.github.com/bni/WakeServer/master/screenshot2.png)
+
+WOL code based on [wol.c](http://www.gcd.org/sengoku/docs/wol.c), copyright(c)2000 by Hiroaki Sengoku <sengoku@gcd.org>
+
 Icon by [qwertykkk](http://qwertykkk.deviantart.com)
 
 TODO: ip address, network, fileserver name, share name and hardware address is hardcoded for my specific setup. 
