@@ -11,7 +11,7 @@ WOL code based on [wol.c](http://www.gcd.org/sengoku/docs/wol.c), copyright(c)20
 
 Icon by [qwertykkk](http://qwertykkk.deviantart.com)
 
-TODO: ip address, network, fileserver name, share name and hardware address is hardcoded for my specific setup. 
+To configure for your specific setup, change the WS* plist entries and rebuild.
 
 ## License
 The MIT License

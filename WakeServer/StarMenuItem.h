@@ -26,6 +26,9 @@
     NSString *shareName;
     NSString *shareUsername;
     NSString *sharePassword;
+
+    NSString *serverMountCommand;
+    NSString *serverShutdownCommand;
 }
 
 @end

@@ -74,7 +74,11 @@
         [updateTimer invalidate];
         updateTimer = nil;
 
-        system("ssh -t -t 10.0.1.8 'exec 3< /etc/cryptmount/secrets; cryptmount --all --passwd-fd 3'");
+        if ([serverMountCommand length] != 0) {
+            const char *mount_command = [serverMountCommand UTF8String];
+            fprintf(stdout, "mount_command: %s\n", mount_command);
+            system(mount_command);
+        }
 
         [self mountServerVolume];
 
@@ -112,8 +116,8 @@
                         userInfo:nil
                         repeats:YES] retain];
 
-        unsigned char* broadcast_addr = (unsigned char*)[networkBroadcastAddress UTF8String];
-        unsigned char* mac_addr = (unsigned char*)[serverHardwareAddress UTF8String];
+        unsigned char *broadcast_addr = (unsigned char*)[networkBroadcastAddress UTF8String];
+        unsigned char *mac_addr = (unsigned char*)[serverHardwareAddress UTF8String];
 
         fprintf(stdout, "broadcast_addrr: %s\n", broadcast_addr);
         fprintf(stdout, "mac_addr: %s\n", mac_addr);
@@ -135,7 +139,9 @@
 
         [self unMountServerVolume];
 
-        system("ssh -t 10.0.1.8 'shutdown -h now'");
+        const char *shutdown_command = [serverShutdownCommand UTF8String];
+        fprintf(stdout, "shutdown_command: %s\n", shutdown_command);
+        system(shutdown_command);
     }
 }
 
@@ -178,6 +184,12 @@
 
     sharePassword = [mainBundle objectForInfoDictionaryKey:@"WSSharePassword"];
     NSLog(@"sharePassword: %@", sharePassword);
+
+    serverMountCommand = [mainBundle objectForInfoDictionaryKey:@"WSServerMountCommand"];
+    NSLog(@"serverMountCommand: %@", serverMountCommand);
+
+    serverShutdownCommand = [mainBundle objectForInfoDictionaryKey:@"WSServerShutdownCommand"];
+    NSLog(@"serverShutdownCommand: %@", serverShutdownCommand);
 }
 
 @end

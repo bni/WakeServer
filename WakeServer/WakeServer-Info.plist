@@ -48,5 +48,9 @@
 	<string></string>
 	<key>WSSharePassword</key>
 	<string></string>
+	<key>WSServerMountCommand</key>
+	<string>ssh -t -t 10.0.1.8 &apos;exec 3&lt; /etc/cryptmount/secrets; cryptmount --all --passwd-fd 3&apos;</string>
+	<key>WSServerShutdownCommand</key>
+	<string>ssh -t 10.0.1.8 &apos;shutdown -h now&apos;</string>
 </dict>
 </plist>
