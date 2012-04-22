@@ -12,30 +12,31 @@
 
 - (void)mountServerVolume
 {
-    NSString *serverAddress = @"nexus";
-    NSString *volumeName = @"Media";
-    
-    NSString *username = @"";
-    NSString *password = @"";
-    
-    NSString *urlStringOfVolumeToMount = [[[NSString alloc] initWithFormat:@"smb://%@/%@", serverAddress, volumeName] autorelease];
+    NSString *urlStringOfVolumeToMount = [[[NSString alloc] initWithFormat:@"%@://%@/%@",
+                                           shareProtocol, serverName, shareName] autorelease];
+
     urlStringOfVolumeToMount = [urlStringOfVolumeToMount stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
-    
+
     NSURL *urlOfVolumeToMount = [[[NSURL alloc] initWithString:urlStringOfVolumeToMount] autorelease];
-    
+
     OSErr error = -1;
-    
+
     FSVolumeRefNum refNum;
-    
-    error = FSMountServerVolumeSync((CFURLRef) urlOfVolumeToMount, NULL, (CFStringRef) username, (CFStringRef) password, &refNum, FALSE);
-    
+
+    error = FSMountServerVolumeSync((CFURLRef)urlOfVolumeToMount, NULL,
+                                    (CFStringRef)shareUsername, (CFStringRef)sharePassword,
+                                    &refNum, FALSE);
+
     NSLog(@"mount status: %d", error);
 }
 
 - (void)unMountServerVolume
 {
     NSError	*error = nil;
-    [[NSWorkspace sharedWorkspace] unmountAndEjectDeviceAtURL:[NSURL fileURLWithPath:@"/Volumes/Media"] error:&error];
+
+    NSString *volumeToUnMount = [[[NSString alloc] initWithFormat:@"/Volumes/%@", shareName] autorelease];
+
+    [[NSWorkspace sharedWorkspace] unmountAndEjectDeviceAtURL:[NSURL fileURLWithPath:volumeToUnMount] error:&error];
 }
 
 - (void)showHollowStar
@@ -110,9 +111,12 @@
                         selector:@selector(fireStartupTimer:)
                         userInfo:nil
                         repeats:YES] retain];
-        
-        unsigned char broadcast_addr[14] = "10.0.1.255";
-        unsigned char mac_addr[18] = "00:0c:6e:50:8c:1a";
+
+        unsigned char* broadcast_addr = (unsigned char*)[networkBroadcastAddress UTF8String];
+        unsigned char* mac_addr = (unsigned char*)[serverHardwareAddress UTF8String];
+
+        fprintf(stdout, "broadcast_addrr: %s\n", broadcast_addr);
+        fprintf(stdout, "mac_addr: %s\n", mac_addr);
 
         if (send_wol_packet(broadcast_addr, mac_addr)) {
             NSLog(@"Error sending WOL packet");
@@ -153,12 +157,27 @@
 
     // Read plist values here
     NSBundle* mainBundle = [NSBundle mainBundle];
+
+    networkBroadcastAddress = [mainBundle objectForInfoDictionaryKey:@"WSNetworkBroadcastAddress"];
+    NSLog(@"networkBroadcastAddress: %@", networkBroadcastAddress);
+
     serverHardwareAddress = [mainBundle objectForInfoDictionaryKey:@"WSServerHardwareAddress"];
     NSLog(@"serverHardwareAddress: %@", serverHardwareAddress);
 
-    const char* mac_addr = [serverHardwareAddress UTF8String];
+    shareProtocol = [mainBundle objectForInfoDictionaryKey:@"WSShareProtocol"];
+    NSLog(@"shareProtocol: %@", shareProtocol);
 
-    fprintf(stdout, "mac addr: %s\n", mac_addr);
+    serverName = [mainBundle objectForInfoDictionaryKey:@"WSServerName"];
+    NSLog(@"serverName: %@", serverName);
+
+    shareName = [mainBundle objectForInfoDictionaryKey:@"WSShareName"];
+    NSLog(@"shareName: %@", shareName);
+
+    shareUsername = [mainBundle objectForInfoDictionaryKey:@"WSShareUsername"];
+    NSLog(@"shareUsername: %@", shareUsername);
+
+    sharePassword = [mainBundle objectForInfoDictionaryKey:@"WSSharePassword"];
+    NSLog(@"sharePassword: %@", sharePassword);
 }
 
 @end

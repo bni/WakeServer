@@ -36,5 +36,17 @@
 	<string>NSApplication</string>
 	<key>WSServerHardwareAddress</key>
 	<string>00:0c:6e:50:8c:1a</string>
+	<key>WSNetworkBroadcastAddress</key>
+	<string>10.0.1.255</string>
+	<key>WSShareProtocol</key>
+	<string>smb</string>
+	<key>WSServerName</key>
+	<string>nexus</string>
+	<key>WSShareName</key>
+	<string>Media</string>
+	<key>WSShareUsername</key>
+	<string></string>
+	<key>WSSharePassword</key>
+	<string></string>
 </dict>
 </plist>

@@ -17,8 +17,15 @@
     bool starEnabled;
     
     int nrTimerTicks;
-    
+
+    NSString *networkBroadcastAddress;
     NSString *serverHardwareAddress;
+
+    NSString *shareProtocol;
+    NSString *serverName;
+    NSString *shareName;
+    NSString *shareUsername;
+    NSString *sharePassword;
 }
 
 @end
