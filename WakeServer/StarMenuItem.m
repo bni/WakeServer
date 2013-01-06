@@ -70,7 +70,7 @@
 {
     [self doCountTick];
 
-    if (nrTimerTicks == 90 && state == STATE_STARTING) {
+    if (nrTimerTicks == 50 && state == STATE_STARTING) {
         [updateTimer invalidate];
         updateTimer = nil;
 
@@ -92,7 +92,7 @@
 {
     [self doCountTick];
 
-    if (nrTimerTicks == 30 && state == STATE_STOPPING) {
+    if (nrTimerTicks == 20 && state == STATE_STOPPING) {
         [updateTimer invalidate];
         updateTimer = nil;
 

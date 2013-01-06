@@ -135,7 +135,7 @@
 		8033E2AB13E5AE8600170FD3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = 8033E2AE13E5AE8600170FD3 /* Build configuration list for PBXProject "WakeServer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -240,6 +240,7 @@
 		8033E2D313E5AE8700170FD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WakeServer/WakeServer-Prefix.pch";
 				INFOPLIST_FILE = "WakeServer/WakeServer-Info.plist";
@@ -251,6 +252,7 @@
 		8033E2D413E5AE8700170FD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WakeServer/WakeServer-Prefix.pch";
 				INFOPLIST_FILE = "WakeServer/WakeServer-Info.plist";

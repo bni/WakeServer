@@ -35,7 +35,7 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>WSServerHardwareAddress</key>
-	<string>00:0c:6e:50:8c:1a</string>
+	<string>30:85:a9:3f:b6:08</string>
 	<key>WSNetworkBroadcastAddress</key>
 	<string>10.0.1.255</string>
 	<key>WSShareProtocol</key>
@@ -51,6 +51,6 @@
 	<key>WSServerMountCommand</key>
 	<string>ssh -t -t 10.0.1.8 &apos;exec 3&lt; /etc/cryptmount/secrets; cryptmount --all --passwd-fd 3&apos;</string>
 	<key>WSServerShutdownCommand</key>
-	<string>ssh -t 10.0.1.8 &apos;shutdown -h now&apos;</string>
+	<string>ssh -t 10.0.1.8 &apos;/sbin/shutdown -h now&apos;</string>
 </dict>
 </plist>

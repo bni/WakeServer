@@ -48,7 +48,7 @@ int send_wol_packet(unsigned char *broadcast_addr, unsigned char *mac_addr)
     int sd;
     int optval;
     char unsigned buf[BUFMAX];
-    int len;
+    size_t len;
     struct sockaddr_in sin;
     unsigned char mac[MACLEN];
     unsigned char *p;
