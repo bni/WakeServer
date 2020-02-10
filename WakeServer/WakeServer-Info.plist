@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>folder_fileserver.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>wakeserver.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -29,28 +29,28 @@
 	<key>LSUIElement</key>
 	<string>1</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2011 Björn Nilsson. All rights reserved.</string>
+	<string>Copyright © 2020 Björn Nilsson. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>WSNetworkBroadcastAddress</key>
+	<string>192.168.1.255</string>
 	<key>WSServerHardwareAddress</key>
 	<string>30:85:a9:3f:b6:08</string>
-	<key>WSNetworkBroadcastAddress</key>
-	<string>10.0.1.255</string>
-	<key>WSShareProtocol</key>
-	<string>smb</string>
+	<key>WSServerMountCommand</key>
+	<string></string>
 	<key>WSServerName</key>
 	<string>nexus</string>
+	<key>WSServerShutdownCommand</key>
+	<string>ssh -t 192.168.1.14 &apos;/sbin/shutdown -h now&apos;</string>
 	<key>WSShareName</key>
 	<string>Media</string>
-	<key>WSShareUsername</key>
-	<string></string>
 	<key>WSSharePassword</key>
 	<string></string>
-	<key>WSServerMountCommand</key>
-	<string>ssh -t -t 10.0.1.8 &apos;exec 3&lt; /etc/cryptmount/secrets; cryptmount --all --passwd-fd 3&apos;</string>
-	<key>WSServerShutdownCommand</key>
-	<string>ssh -t 10.0.1.8 &apos;/sbin/shutdown -h now&apos;</string>
+	<key>WSShareProtocol</key>
+	<string>smb</string>
+	<key>WSShareUsername</key>
+	<string></string>
 </dict>
 </plist>
