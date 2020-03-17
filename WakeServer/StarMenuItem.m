@@ -10,7 +10,7 @@
     [super dealloc];    
 }
 
-- (void)mountServerVolume
+/*- (void)mountServerVolume
 {
     NSString *urlStringOfVolumeToMount = [[[NSString alloc] initWithFormat:@"%@://%@/%@",
                                            shareProtocol, serverName, shareName] autorelease];
@@ -28,28 +28,28 @@
                                     &refNum, FALSE);
 
     NSLog(@"mount status: %d", error);
-}
+}*/
 
-- (void)unMountServerVolume
+/*- (void)unMountServerVolume
 {
     NSError	*error = nil;
 
     NSString *volumeToUnMount = [[[NSString alloc] initWithFormat:@"/Volumes/%@", shareName] autorelease];
 
     [[NSWorkspace sharedWorkspace] unmountAndEjectDeviceAtURL:[NSURL fileURLWithPath:volumeToUnMount] error:&error];
-}
+}*/
 
 - (void)showHollowStar
 {
-    [statusItem setTitle:[NSString stringWithFormat:@"%C", 0x2606]];
-    
+    statusItem.button.title = [NSString stringWithFormat:@"%C", 0x2606];
+
     starEnabled = false;
 }
 
 - (void)showFilledStar
 {
-    [statusItem setTitle:[NSString stringWithFormat:@"%C", 0x2605]];
-    
+    statusItem.button.title = [NSString stringWithFormat:@"%C", 0x2605];
+
     starEnabled = true;
 }
 
@@ -70,7 +70,7 @@
 {
     [self doCountTick];
 
-    if (nrTimerTicks == 65 && state == STATE_STARTING) {
+    if (nrTimerTicks == 50 && state == STATE_STARTING) {
         [updateTimer invalidate];
         updateTimer = nil;
 
@@ -80,7 +80,7 @@
             system(mount_command);
         }
 
-        [self mountServerVolume];
+        //[self mountServerVolume];
 
         [self showFilledStar];
 
@@ -92,7 +92,7 @@
 {
     [self doCountTick];
 
-    if (nrTimerTicks == 20 && state == STATE_STOPPING) {
+    if (nrTimerTicks == 10 && state == STATE_STOPPING) {
         [updateTimer invalidate];
         updateTimer = nil;
 
@@ -137,7 +137,7 @@
                         userInfo:nil
                         repeats:YES] retain];
 
-        [self unMountServerVolume];
+        //[self unMountServerVolume];
 
         const char *shutdown_command = [serverShutdownCommand UTF8String];
         fprintf(stdout, "shutdown_command: %s\n", shutdown_command);
@@ -148,18 +148,17 @@
 - (void)awakeFromNib
 {
     statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
-    [statusItem setHighlightMode:YES];
 
     state = STATE_OFF;
     nrTimerTicks = 0;
     [self showHollowStar];
 
-    [statusItem setEnabled:YES];
-    [statusItem setToolTip:@"nexus"];
-    
-    [statusItem setAction:@selector(clickStar:)];
-    
-    [statusItem setTarget:self];
+    statusItem.button.enabled = YES;
+    statusItem.button.toolTip = @"nexus";
+
+    statusItem.button.action = @selector(clickStar:);
+
+    statusItem.button.target = self;
 
     // Read plist values here
     NSBundle* mainBundle = [NSBundle mainBundle];
