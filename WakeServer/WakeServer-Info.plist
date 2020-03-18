@@ -38,19 +38,7 @@
 	<string>192.168.1.255</string>
 	<key>WSServerHardwareAddress</key>
 	<string>fc:aa:14:6f:71:76</string>
-	<key>WSServerMountCommand</key>
-	<string></string>
-	<key>WSServerName</key>
-	<string>nexus</string>
 	<key>WSServerShutdownCommand</key>
 	<string>ssh -t 192.168.1.14 &apos;/sbin/shutdown -h now&apos;</string>
-	<key>WSShareName</key>
-	<string>Media</string>
-	<key>WSSharePassword</key>
-	<string></string>
-	<key>WSShareProtocol</key>
-	<string>smb</string>
-	<key>WSShareUsername</key>
-	<string></string>
 </dict>
 </plist>

@@ -21,13 +21,6 @@
     NSString *networkBroadcastAddress;
     NSString *serverHardwareAddress;
 
-    NSString *shareProtocol;
-    NSString *serverName;
-    NSString *shareName;
-    NSString *shareUsername;
-    NSString *sharePassword;
-
-    NSString *serverMountCommand;
     NSString *serverShutdownCommand;
 }
 
