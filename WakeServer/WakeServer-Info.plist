@@ -6,8 +6,6 @@
 	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIconFile</key>
-	<string>folder_fileserver.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -29,16 +27,14 @@
 	<key>LSUIElement</key>
 	<string>1</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2020 Björn Nilsson. All rights reserved.</string>
+	<string>Copyright © 2026 Björn Nilsson. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>WSNetworkBroadcastAddress</key>
-	<string>192.168.1.255</string>
+	<string>192.168.0.255</string>
 	<key>WSServerHardwareAddress</key>
 	<string>fc:aa:14:6f:71:76</string>
-	<key>WSServerShutdownCommand</key>
-	<string>ssh -t 192.168.1.14 &apos;/sbin/shutdown -h now&apos;</string>
 </dict>
 </plist>

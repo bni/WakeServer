@@ -9,14 +9,14 @@ Click the menu item again and the server is shut down.
 
 WOL code based on [wol.c](http://www.gcd.org/sengoku/docs/wol.c), copyright(c)2000 by Hiroaki Sengoku <sengoku@gcd.org>
 
-Icon by [qwertykkk](http://qwertykkk.deviantart.com)
+Icon by [Gordon Irving](https://www.iconarchive.com/show/laura-drives-icons-by-gordon-irving.html)
 
 To configure for your specific setup, change the WS* plist entries and rebuild.
 
 ## License
 The MIT License
 
-Copyright (c) 2012 Björn Nilsson
+Copyright (c) 2026 Björn Nilsson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

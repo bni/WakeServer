@@ -20,8 +20,6 @@
 
     NSString *networkBroadcastAddress;
     NSString *serverHardwareAddress;
-
-    NSString *serverShutdownCommand;
 }
 
 @end

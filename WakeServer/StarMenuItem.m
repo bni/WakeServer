@@ -65,6 +65,19 @@
     }
 }
 
+- (void)wakeServer
+{
+    unsigned char *broadcast_addr = (unsigned char*)[networkBroadcastAddress UTF8String];
+    unsigned char *mac_addr = (unsigned char*)[serverHardwareAddress UTF8String];
+
+    fprintf(stdout, "broadcast_addrr: %s\n", broadcast_addr);
+    fprintf(stdout, "mac_addr: %s\n", mac_addr);
+
+    if (send_wol_packet(broadcast_addr, mac_addr)) {
+        NSLog(@"Error sending WOL packet");
+    }
+}
+
 - (IBAction)clickStar:(id)sender
 {
     NSEvent *event = [NSApp currentEvent];
@@ -85,15 +98,7 @@
                             userInfo:nil
                             repeats:YES] retain];
 
-            unsigned char *broadcast_addr = (unsigned char*)[networkBroadcastAddress UTF8String];
-            unsigned char *mac_addr = (unsigned char*)[serverHardwareAddress UTF8String];
-
-            fprintf(stdout, "broadcast_addrr: %s\n", broadcast_addr);
-            fprintf(stdout, "mac_addr: %s\n", mac_addr);
-
-            if (send_wol_packet(broadcast_addr, mac_addr)) {
-                NSLog(@"Error sending WOL packet");
-            }
+            [self wakeServer];
         } else if (state == STATE_RUNNING) {
             state = STATE_STOPPING;
             nrTimerTicks = 0;
@@ -106,9 +111,7 @@
                             userInfo:nil
                             repeats:YES] retain];
 
-            const char *shutdown_command = [serverShutdownCommand UTF8String];
-            fprintf(stdout, "shutdown_command: %s\n", shutdown_command);
-            system(shutdown_command);
+            [self wakeServer];
         }
     }
 }
@@ -133,9 +136,6 @@
 
     serverHardwareAddress = [mainBundle objectForInfoDictionaryKey:@"WSServerHardwareAddress"];
     NSLog(@"serverHardwareAddress: %@", serverHardwareAddress);
-
-    serverShutdownCommand = [mainBundle objectForInfoDictionaryKey:@"WSServerShutdownCommand"];
-    NSLog(@"serverShutdownCommand: %@", serverShutdownCommand);
 }
 
 @end
