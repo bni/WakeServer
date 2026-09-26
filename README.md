@@ -5,8 +5,6 @@ macOS menu item to wake up a fileserver using Wake On LAN. Click the star to wak
 
 ![Screenshot 2](https://raw.github.com/bni/WakeServer/master/screenshot2.png)
 
-Click the menu item again and the server is shut down.
-
 WOL code based on [wol.c](http://www.gcd.org/sengoku/docs/wol.c), copyright(c)2000 by Hiroaki Sengoku <sengoku@gcd.org>
 
 Icon by [Gordon Irving](https://www.iconarchive.com/show/laura-drives-icons-by-gordon-irving.html)
